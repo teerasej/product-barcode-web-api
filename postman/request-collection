@@ -1,0 +1,62 @@
+{
+	"info": {
+		"name": "Product Barcode API",
+		"_postman_id": "9c7ada9a-8f80-4c22-bc8b-7181cbd2c8f3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List all product in DB",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8888/product-barcode/all.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"product-barcode",
+						"all.php"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Find a product with a barcode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"barcode\":\"8850987101472\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8888/product-barcode/find.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"product-barcode",
+						"find.php"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
